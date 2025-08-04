@@ -1,0 +1,1366 @@
+
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Contabilidade Tributária | Prof. Fábio Fernandes</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --info: #2980b9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .prof-signature {
+            background-color: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 1.5rem;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        
+        nav {
+            background-color: var(--secondary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+            position: relative;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-links a:hover {
+            border-bottom: 2px solid white;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .module {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            transition: transform 0.3s;
+        }
+        
+        .module:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--secondary);
+            font-size: 2rem;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 2rem 0 1.2rem;
+            font-size: 1.5rem;
+        }
+        
+        h4 {
+            color: var(--dark);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.2rem;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+        
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2.2rem;
+        }
+        
+        li {
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+        
+        li::before {
+            content: '•';
+            color: var(--secondary);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 253, 231, 0.5);
+            padding: 1.5rem;
+            border-left: 5px solid var(--warning);
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .example {
+            background-color: rgba(227, 242, 253, 0.5);
+            padding: 1.5rem;
+            border-left: 5px solid var(--secondary);
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .example-title {
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            color: var(--secondary);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .example-title::before {
+            content: '📌';
+            margin-right: 0.5rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #f1f8ff;
+        }
+        
+        .comparison-table {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .calculator {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .calculator h4 {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .calculator h4::before {
+            content: '🧮';
+            margin-right: 0.8rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        input:focus, select:focus {
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+            outline: none;
+        }
+        
+        button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.9rem 1.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .result {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background-color: #e8f5e9;
+            border-left: 5px solid var(--success);
+            border-radius: 0 8px 8px 0;
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        .quiz {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .quiz h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .quiz h3::before {
+            content: '❓';
+            margin-right: 0.8rem;
+        }
+        
+        .quiz-question {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .quiz-question:last-child {
+            border-bottom: none;
+        }
+        
+        .quiz-options {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+        
+        .quiz-options li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .quiz-options li::before {
+            content: '';
+            display: none;
+        }
+        
+        .quiz-options label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 0.8rem 1rem;
+            background-color: white;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            transition: all 0.3s;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+        
+        .quiz-options label:hover {
+            border-color: var(--secondary);
+            background-color: #f0f8ff;
+        }
+        
+        .quiz-options input {
+            width: auto;
+            margin-right: 1rem;
+            width: 18px;
+            height: 18px;
+        }
+        
+        .quiz-feedback {
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        .correct-feedback {
+            background-color: #e8f5e9;
+            border-left: 5px solid var(--success);
+        }
+        
+        .incorrect-feedback {
+            background-color: #ffebee;
+            border-left: 5px solid var(--accent);
+        }
+        
+        .tab-container {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .tab-buttons {
+            display: flex;
+            background-color: #f1f1f1;
+            overflow-x: auto;
+        }
+        
+        .tab-btn {
+            padding: 1rem 2rem;
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            font-weight: 600;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-btn:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .tab-btn.active {
+            background-color: white;
+            color: var(--secondary);
+            border-bottom: 3px solid var(--secondary);
+        }
+        
+        .tab-content {
+            padding: 2rem;
+            background-color: white;
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .download-resources {
+            background-color: #e3f2fd;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .download-resources h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .resource-btn {
+            display: inline-flex;
+            align-items: center;
+            margin: 0.5rem;
+            background-color: var(--info);
+        }
+        
+        .resource-btn::before {
+            content: '📥';
+            margin-right: 0.5rem;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .professor-signature {
+            font-style: italic;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: var(--light);
+            background-color: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        
+        .professor-signature strong {
+            font-weight: 700;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--accent);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 99;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .module {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--secondary);
+                padding: 1rem 2rem;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 0.8rem 0;
+            }
+            
+            .nav-links a {
+                padding: 0.5rem 0;
+                border-bottom: none;
+            }
+            
+            .nav-links a:hover {
+                border-bottom: none;
+                color: var(--light);
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .prof-signature {
+                margin-top: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .module {
+                padding: 1.8rem;
+            }
+            
+            .tab-btn {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .tab-content {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .module {
+                padding: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            .calculator, .quiz {
+                padding: 1.5rem;
+            }
+            
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+    </style></head><body>
+    <header>
+        <div class="header-content">
+            <h1>Curso de Contabilidade Tributária Brasileira</h1>
+            <p class="subtitle">Domine o STN - Sistema Tributário Nacional -  com este curso completo e prático</p>
+            <div class="prof-signature">Prof. Fábio Fernandes</div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#base-constitucional">Base Constitucional</a></li>
+                <li><a href="#tipos-tributos">Tipos de Tributos</a></li>
+                <li><a href="#regimes-tributarios">Regimes Tributários</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="base-constitucional" class="module">
+            <h2>Base Constitucional e Legal do Sistema Tributário</h2>
+            
+            <h3>A Constituição Federal de 1988</h3>
+            <p>Os artigos 145 a 162 da Constituição Federal estabelecem os fundamentos do sistema tributário nacional, definindo:</p>
+            <ul>
+                <li>Os princípios gerais que regem a tributação</li>
+                <li>A repartição de competências entre União, Estados, Distrito Federal e Municípios</li>
+                <li>As limitações ao poder de tributar</li>
+                <li>As espécies tributárias permitidas</li>
+                <li>As regras para distribuição das receitas tributárias</li>
+            </ul>
+            
+            <div class="highlight">
+                <p><strong>Princípios Constitucionais Tributários Essenciais:</strong></p>
+                <ul>
+                    <li><strong>Legalidade Tributária (Art. 150, I):</strong> "Sem lei, não há tributo" - Só pode ser cobrado tributo previsto em lei.</li>
+                    <li><strong>Igualdade ou Isonomia (Art. 150, II):</strong> Tratamento igual para contribuintes em situação equivalente.</li>
+                    <li><strong>Anterioridade (Art. 150, III, b e c):</strong> Tributo só pode ser cobrado no exercício seguinte ao da publicação da lei.</li>
+                    <li><strong>Vedado Confisco (Art. 150, IV):</strong> Tributo não pode ter efeito confiscatório sobre o patrimônio.</li>
+                    <li><strong>Irretroatividade (Art. 150, III, a):</strong> Lei tributária não pode atingir fatos geradores ocorridos antes de sua vigência.</li>
+                </ul>
+            </div>
+            
+            <h3>Código Tributário Nacional (Lei nº 5.172/1966)</h3>
+            <p>O CTN é a norma geral do sistema tributário brasileiro, regulamentando:</p>
+            <ul>
+                <li>Legislação tributária (vigência, aplicação, interpretação)</li>
+                <li>Obrigação tributária (fato gerador, sujeitos ativo e passivo)</li>
+                <li>Crédito tributário (lançamento, suspensão, extinção, exclusão)</li>
+                <li>Garantias e privilégios do crédito tributário</li>
+                <li>Administração tributária</li>
+            </ul>
+            
+            <div class="example">
+                <p class="example-title">Hierarquia das Normas Tributárias no Brasil:</p>
+                <ol>
+                    <li><strong>Constituição Federal</strong> - Norma suprema, define competências e princípios</li>
+                    <li><strong>Leis Complementares</strong> (ex: LC 123/2006 - Simples Nacional) - Requerem quórum qualificado</li>
+                    <li><strong>Leis Ordinárias</strong> - Aprovadas por maioria simples</li>
+                    <li><strong>Tratados Internacionais</strong> - Acordos que versem sobre matéria tributária</li>
+                    <li><strong>Decretos</strong> - Regulamentam as leis</li>
+                    <li><strong>Normas Complementares</strong> - Portarias, instruções normativas, etc.</li>
+                </ol>
+            </div>
+            
+            <div class="quiz">
+                <h3>Teste seus conhecimentos</h3>
+                <div class="quiz-question">
+                    <p>1. Qual princípio tributário impede a cobrança de tributo no mesmo ano em que a lei foi publicada?</p>
+                    <ul class="quiz-options">
+                        <li>
+                            <label>
+                                <input type="radio" name="q1" value="a"> Legalidade
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="q1" value="b"> Anterioridade
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="q1" value="c"> Igualdade
+                            </label>
+                        </li>
+                    </ul>
+                    <button onclick="checkAnswer('q1', 'b', 'feedback-q1')">Verificar resposta</button>
+                    <div id="feedback-q1" class="quiz-feedback">
+                        <strong>Resposta Correta:</strong> O princípio da anterioridade estabelece que nenhum tributo pode ser cobrado no mesmo exercício financeiro em que foi publicada a lei que o instituiu ou aumentou. Este princípio visa dar segurança jurídica aos contribuintes, permitindo que se preparem para as novas obrigações.
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p>2. Qual é a função principal do Código Tributário Nacional?</p>
+                    <ul class="quiz-options">
+                        <li>
+                            <label>
+                                <input type="radio" name="q2" value="a"> Estabelecer alíquotas específicas para cada tributo
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="q2" value="b"> Servir como norma geral do sistema tributário brasileiro
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="q2" value="c"> Definir os benefícios fiscais para cada setor da economia
+                            </label>
+                        </li>
+                    </ul>
+                    <button onclick="checkAnswer('q2', 'b', 'feedback-q2')">Verificar resposta</button>
+                    <div id="feedback-q2" class="quiz-feedback">
+                        <strong>Resposta Correta:</strong> O Código Tributário Nacional (Lei nº 5.172/1966) tem como função principal servir como norma geral do sistema tributário brasileiro, estabelecendo conceitos, regras e procedimentos aplicáveis a todos os tributos, sem tratar de aspectos específicos de cada um.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tipos-tributos" class="module">
+            <h2>Tipos de Tributos no Brasil</h2>
+            
+            <h3>Classificação dos Tributos</h3>
+            <p>Os tributos podem ser classificados de várias formas conforme sua natureza, finalidade e forma de cobrança:</p>
+            
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="openTab(event, 'direto-indireto')">Direto/Indireto</button>
+                    <button class="tab-btn" onclick="openTab(event, 'progressivo-regressivo')">Progressivo/Regressivo</button>
+                    <button class="tab-btn" onclick="openTab(event, 'finalidade')">Por Finalidade</button>
+                </div>
+                
+                <div id="direto-indireto" class="tab-content active">
+                    <h4>Tributos Diretos e Indiretos</h4>
+                    <div class="comparison-table">
+                        <table>
+                            <tr>
+                                <th>Característica</th>
+                                <th>Tributos Diretos</th>
+                                <th>Tributos Indiretos</th>
+                            </tr>
+                            <tr>
+                                <td>Incidência</td>
+                                <td>Patrimônio ou Renda</td>
+                                <td>Consumo</td>
+                            </tr>
+                            <tr>
+                                <td>Contribuinte</td>
+                                <td>Não pode transferir o ônus</td>
+                                <td>Pode transferir o ônus para terceiros</td>
+                            </tr>
+                            <tr>
+                                <td>Exemplos</td>
+                                <td>IRPJ, IPTU, ITR</td>
+                                <td>ICMS, IPI, PIS/COFINS</td>
+                            </tr>
+                            <tr>
+                                <td>Efeito Econômico</td>
+                                <td>Progressivo (quem tem mais paga mais)</td>
+                                <td>Regressivo (impacta mais os de menor renda)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="progressivo-regressivo" class="tab-content">
+                    <h4>Tributos Progressivos, Proporcionais e Regressivos</h4>
+                    <div class="comparison-table">
+                        <table>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Característica</th>
+                                <th>Exemplo</th>
+                            </tr>
+                            <tr>
+                                <td>Progressivo</td>
+                                <td>Alíquota aumenta conforme a base de cálculo aumenta</td>
+                                <td>IRPF (pessoa física)</td>
+                            </tr>
+                            <tr>
+                                <td>Proporcional</td>
+                                <td>Alíquota constante independente da base</td>
+                                <td>ICMS (em geral)</td>
+                            </tr>
+                            <tr>
+                                <td>Regressivo</td>
+                                <td>Alíquota diminui conforme a base aumenta</td>
+                                <td>Alguns tributos indiretos têm efeito regressivo</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="finalidade" class="tab-content">
+                    <h4>Classificação por Finalidade</h4>
+                    <div class="comparison-table">
+                        <table>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Característica</th>
+                                <th>Exemplo</th>
+                            </tr>
+                            <tr>
+                                <td>Fiscal</td>
+                                <td>Principal finalidade é arrecadar recursos</td>
+                                <td>IRPJ, ICMS, IPTU</td>
+                            </tr>
+                            <tr>
+                                <td>Extrafiscal</td>
+                                <td>Principal finalidade é regular a economia</td>
+                                <td>IPI reduzido para produtos essenciais</td>
+                            </tr>
+                            <tr>
+                                <td>Parafiscal</td>
+                                <td>Arrecadado por entidades para fins específicos</td>
+                                <td>Contribuições corporativas</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quiz">
+                <h3>Fixando o Conteúdo</h3>
+                <div class="quiz-question">
+                    <p>1. Qual destes tributos é considerado direto?</p>
+                    <ul class="quiz-options">
+                        <li>
+                            <label>
+                                <input type="radio" name="q3" value="a"> ICMS
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="q3" value="b"> IPI
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="q3" value="c"> IRPJ
+                            </label>
+                        </li>
+                    </ul>
+                    <button onclick="checkAnswer('q3', 'c', 'feedback-q3')">Verificar resposta</button>
+                    <div id="feedback-q3" class="quiz-feedback">
+                        <strong>Resposta Correta:</strong> O IRPJ (Imposto de Renda Pessoa Jurídica) é um tributo direto porque incide diretamente sobre a renda da empresa e não pode ser transferido para terceiros. Já ICMS e IPI são tributos indiretos, pois são cobrados sobre o consumo e seu ônus pode ser repassado ao consumidor final.
+                    </div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p>2. Quando um tributo é considerado extrafiscal?</p>
+                    <ul class="quiz-options">
+                        <li>
+                            <label>
+                                <input type="radio" name="q4" value="a"> Quando sua principal finalidade é arrecadar recursos
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="q4" value="b"> Quando é utilizado para regular a economia
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="q4" value="c"> Quando é cobrado por entidades para fins específicos
+                            </label>
+                        </li>
+                    </ul>
+                    <button onclick="checkAnswer('q4', 'b', 'feedback-q4')">Verificar resposta</button>
+                    <div id="feedback-q4" class="quiz-feedback">
+                        <strong>Resposta Correta:</strong> Um tributo é considerado extrafiscal quando sua principal finalidade
+                            </div>
+                </div>
+            </div>
+            
+            <h3>Espécies Tributárias no Brasil</h3>
+            <p>Conforme o artigo 5º do CTN, os tributos podem ser classificados em cinco espécies:</p>
+            
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="openTab(event, 'impostos')">Impostos</button>
+                    <button class="tab-btn" onclick="openTab(event, 'taxas')">Taxas</button>
+                    <button class="tab-btn" onclick="openTab(event, 'contrib-melhoria')">Contribuição de Melhoria</button>
+                    <button class="tab-btn" onclick="openTab(event, 'contrib-especiais')">Contribuições Especiais</button>
+                    <button class="tab-btn" onclick="openTab(event, 'emprestimos')">Empréstimos Compulsórios</button>
+                </div>
+                
+                <div id="impostos" class="tab-content active">
+                    <h4>Impostos</h4>
+                    <p>São tributos não vinculados a uma contraprestação específica do Estado, ou seja, não há uma obrigação direta do poder público em relação ao contribuinte.</p>
+                    
+                    <div class="comparison-table">
+                        <table>
+                            <tr>
+                                <th>Competência</th>
+                                <th>Impostos</th>
+                                <th>Fato Gerador</th>
+                            </tr>
+                            <tr>
+                                <td>União</td>
+                                <td>IR, IPI, IOF, ITR, IGF, IE</td>
+                                <td>Renda, industrialização, operações financeiras, propriedade rural, grandes fortunas, comércio exterior</td>
+                            </tr>
+                            <tr>
+                                <td>Estados/DF</td>
+                                <td>ICMS, IPVA</td>
+                                <td>Circulação de mercadorias, propriedade de veículos</td>
+                            </tr>
+                            <tr>
+                                <td>Municípios</td>
+                                <td>ISS, IPTU</td>
+                                <td>Serviços, propriedade urbana</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="example">
+                        <p class="example-title">Exemplo Prático: Cálculo de IPTU</p>
+                        <p>O IPTU (Imposto Predial e Territorial Urbano) é calculado sobre o valor venal do imóvel. Supondo um imóvel com valor venal de R$ 500.000,00 e alíquota de 1%:</p>
+                        <p><strong>IPTU = Valor Venal × Alíquota</strong></p>
+                        <p>IPTU = R$ 500.000 × 1% = R$ 5.000,00/ano</p>
+                    </div>
+                </div>
+                
+                <div id="taxas" class="tab-content">
+                    <h4>Taxas</h4>
+                    <p>São tributos vinculados a uma atividade estatal específica, podendo ser:</p>
+                    <ul>
+                        <li><strong>Taxas de Serviço:</strong> Cobradas por serviços públicos específicos e divisíveis (ex: taxa de coleta de lixo)</li>
+                        <li><strong>Taxas de Poder de Polícia:</strong> Cobradas pela fiscalização, licenciamento ou autorização (ex: taxa de fiscalização de anúncios)</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <p><strong>Diferença entre Taxa e Preço Público:</strong> A taxa é compulsória e decorre do poder de polícia ou serviço público específico, enquanto o preço público é voluntário e decorre de serviços facultativos (ex: passaporte).</p>
+                    </div>
+                </div>
+                
+                <div id="contrib-melhoria" class="tab-content">
+                    <h4>Contribuição de Melhoria</h4>
+                    <p>Tributo cobrado em decorrência de obra pública que valoriza imóveis particulares. Requer:</p>
+                    <ul>
+                        <li>Realização de obra pública</li>
+                        <li>Valorização dos imóveis próximos</li>
+                        <li>Limitação do valor cobrado ao custo da obra e ao aumento de valor do imóvel</li>
+                    </ul>
+                    
+                    <div class="example">
+                        <p class="example-title">Exemplo:</p>
+                        <p>Uma prefeitura pavimenta uma rua e cobra contribuição de melhoria dos proprietários dos imóveis que tiveram valorização em decorrência da obra.</p>
+                    </div>
+                </div>
+                
+                <div id="contrib-especiais" class="tab-content">
+                    <h4>Contribuições Especiais</h4>
+                    <p>São tributos com destinação específica, divididos em:</p>
+                    
+                    <div class="comparison-table">
+                        <table>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Exemplos</th>
+                                <th>Finalidade</th>
+                            </tr>
+                            <tr>
+                                <td>Contribuições Sociais</td>
+                                <td>INSS, PIS, COFINS, CSLL</td>
+                                <td>Financiamento da seguridade social</td>
+                            </tr>
+                            <tr>
+                                <td>Contribuições Econômicas</td>
+                                <td>Contribuições corporativas</td>
+                                <td>Regulação de atividades econômicas</td>
+                            </tr>
+                            <tr>
+                                <td>Contribuições de Intervenção no Domínio Econômico</td>
+                                <td>CIDE Combustíveis</td>
+                                <td>Intervenção em setores específicos</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="emprestimos" class="tab-content">
+                    <h4>Empréstimos Compulsórios</h4>
+                    <p>São recursos tomados compulsoriamente pelo governo em situações excepcionais, com obrigação de restituição. Requer lei complementar para instituição (art. 148 CF).</p>
+                    
+                    <div class="highlight">
+                        <p><strong>Casos de Cabimento:</strong></p>
+                        <ul>
+                            <li>Guerra externa ou sua iminência</li>
+                            <li>Investimento público urgente de relevante interesse nacional</li>
+                            <li>Calamidade pública</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="calculator">
+                <h4>Calculadora de Tributos</h4>
+                <div class="form-group">
+                    <label for="tributo">Selecione o Tributo:</label>
+                    <select id="tributo">
+                        <option value="icms">ICMS (12% a 18%)</option>
+                        <option value="ipi">IPI (0% a 30%)</option>
+                        <option value="irpj">IRPJ (15% + 10%)</option>
+                        <option value="iss">ISS (2% a 5%)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="valor-base">Valor Base (R$):</label>
+                    <input type="number" id="valor-base" placeholder="Digite o valor">
+                </div>
+                <button onclick="calcularTributo()">Calcular</button>
+                <div id="resultado-tributo" class="result"></div>
+            </div>
+        </section>
+        
+        <section id="regimes-tributarios" class="module">
+            <h2>Regimes Tributários para Empresas</h2>
+            
+            <h3>Simples Nacional (LC 123/2006)</h3>
+            <p>Regime especial unificado para micro e pequenas empresas com faturamento anual de até R$ 5,2 milhões (2025).</p>
+            
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="openTab(event, 'requisitos-simples')">Requisitos</button>
+                    <button class="tab-btn" onclick="openTab(event, 'vantagens-simples')">Vantagens</button>
+                    <button class="tab-btn" onclick="openTab(event, 'anexos-simples')">Anexos e Alíquotas</button>
+                    <button class="tab-btn" onclick="openTab(event, 'novidades-2025')">Novidades 2025</button>
+                </div>
+                
+                <div id="requisitos-simples" class="tab-content active">
+                    <h4>Requisitos para Optar pelo Simples Nacional</h4>
+                    <ul>
+                        <li>Faturamento bruto anual ≤ R$ 4,8 milhões</li>
+                        <li>Não ser sócio, administrador ou titular de outra empresa com faturamento que ultrapasse o limite</li>
+                        <li>Não exercer atividade vedada (art. 17 da LC 123/2006)</li>
+                        <li>Não ter débitos com o Simples Nacional ou com a Receita Federal</li>
+                        <li>MEI: Faturamento ≤ R$ 81.000/ano</li>
+                    </ul>
+                </div>
+                
+                <div id="vantagens-simples" class="tab-content">
+                    <h4>Vantagens do Simples Nacional</h4>
+                    <ul>
+                        <li>Unificação de 8 tributos em uma única guia (DAS)</li>
+                        <li>Alíquotas reduzidas</li>
+                        <li>Regime simplificado de apuração e pagamento</li>
+                        <li>Redução da burocracia</li>
+                        <li>Benefícios fiscais específicos</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <p><strong>Tributos Incluídos:</strong> IRPJ, CSLL, PIS, COFINS, IPI, ICMS, ISS, CPP (para MEI)</p>
+                    </div>
+                </div>
+                
+                <div id="anexos-simples" class="tab-content">
+                    <h4>Anexos e Alíquotas do Simples Nacional (2025)</h4>
+                    <p>O Simples Nacional possui 5 anexos com alíquotas progressivas conforme o faturamento:</p>
+                    
+                    <div class="comparison-table">
+                        <table>
+                            <tr>
+                                <th>Anexo</th>
+                                <th>Atividades</th>
+                                <th>Alíquotas</th>
+                            </tr>
+                            <tr>
+                                <td>I</td>
+                                <td>Comércio</td>
+                                <td>4% a 19%</td>
+                            </tr>
+                            <tr>
+                                <td>II</td>
+                                <td>Indústria</td>
+                                <td>4,5% a 22%</td>
+                            </tr>
+                            <tr>
+                                <td>III</td>
+                                <td>Serviços (gerais)</td>
+                                <td>6% a 33%</td>
+                            </tr>
+                            <tr>
+                                <td>IV</td>
+                                <td>Serviços (profissionais)</td>
+                                <td>4,5% a 22%</td>
+                            </tr>
+                            <tr>
+                                <td>V</td>
+                                <td>Serviços (específicos)</td>
+                                <td>15,5% a 30%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="novidades-2025" class="tab-content">
+                    <h4>Novidades no Simples Nacional para 2025</h4>
+                    <ul>
+                        <li>O limite de faturamento permanece em  R$ 4,8 milhões, e o sublimite de R$ 3,6 milhões, conforme portaria.</li>
+                        <li>Inclusão de novas atividades no regime</li>
+                        <li>Alterações nas alíquotas de alguns anexos</li>
+                        <li>Simplificação de procedimentos para MEI</li>
+                        <li>Novas regras para exclusão do regime</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>Lucro Presumido</h3>
+            <p>Regime tributário com presunção de lucro para cálculo do IRPJ e CSLL, indicado para empresas com faturamento anual entre R$ 4,8 milhões e R$ 85 milhões.</p>
+            
+            <div class="highlight">
+                <p><strong>Percentuais de Presunção (2025):</strong></p>
+                <ul>
+                    <li>8% para atividades em geral (comércio, indústria, serviços)</li>
+                    <li>32% para serviços profissionais (advocacia, medicina, etc.)</li>
+                    <li>1,6% para revenda de combustíveis</li>
+                </ul>
+            </div>
+            
+            <div class="example">
+                <p class="example-title">Exemplo de Cálculo no Lucro Presumido:</p>
+                <p>Empresa de serviços com faturamento trimestral de R$ 500.000,00:</p>
+                <p><strong>Lucro Presumido = Faturamento × Percentual de Presunção</strong></p>
+                <p>Lucro Presumido = R$ 500.000 × 32% = R$ 160.000,00</p>
+                <p><strong>IRPJ = (Lucro Presumido × 15%) + (Adicional sobre o excedente)</strong></p>
+                <p>IRPJ = (R$ 160.000 × 15%) + (R$ 60.000 × 10%) = R$ 24.000 + R$ 6.000 = R$ 30.000,00</p>
+                <p><strong>CSLL = Lucro Presumido × 9% = R$ 160.000 × 9% = R$ 14.400,00</strong></p>
+            </div>
+            
+            <h3>Lucro Real</h3>
+            <p>Regime tributário que considera o lucro efetivo da empresa para cálculo dos tributos. Obrigatório para:</p>
+            <ul>
+                <li>Empresas com faturamento anual superior a R$ 85 milhões</li>
+                <li>Atividades financeiras</li>
+                <li>Empresas com benefícios fiscais</li>
+                <li>Quando o lucro real supera o presumido em mais de 32%</li>
+            </ul>
+            
+            <div class="calculator">
+                <h4>Calculadora de Regime Tributário</h4>
+                <div class="form-group">
+                    <label for="faturamento-anual">Faturamento Anual (R$):</label>
+                    <input type="number" id="faturamento-anual" placeholder="Digite o valor">
+                </div>
+                <div class="form-group">
+                    <label for="atividade">Atividade Principal:</label>
+                    <select id="atividade">
+                        <option value="comercio">Comércio</option>
+                        <option value="industria">Indústria</option>
+                        <option value="servicos">Serviços Gerais</option>
+                        <option value="profissionais">Serviços Profissionais</option>
+                    </select>
+                </div>
+                <button onclick="recomendarRegime()">Recomendar Regime</button>
+                <div id="resultado-regime" class="result"></div>
+            </div>
+        </section>
+        
+        <a href="#" class="back-to-top" id="backToTop">↑</a>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Curso Completo de Contabilidade Tributária Brasileira</p>
+            <p>Todos os direitos reservados ao Prof. Fábio Fernandes</p>
+            <div class="professor-signature">
+                <p><strong>Prof. Me.Fábio Fernandes</strong></p>
+                <p>Especialista em Governança Trbutáia e Gestão Estratégica de Negócios</p>
+                <p>Mestre em Educação</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Menu mobile
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Sistema de abas
+        function openTab(evt, tabName) {
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+            
+            const tabButtons = document.getElementsByClassName('tab-btn');
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+            
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+        
+        // Quiz feedback
+        function checkAnswer(questionName, correctAnswer, feedbackId) {
+            const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+            const feedback = document.getElementById(feedbackId);
+            
+            if (!selectedOption) {
+                alert('Por favor, selecione uma opção');
+                return;
+            }
+            
+            if (selectedOption.value === correctAnswer) {
+                feedback.className = 'quiz-feedback correct-feedback';
+                feedback.innerHTML = `<strong>Resposta Correta!</strong> ${feedback.innerHTML}`;
+            } else {
+                feedback.className = 'quiz-feedback incorrect-feedback';
+                feedback.innerHTML = `<strong>Resposta Incorreta.</strong> ${feedback.innerHTML}`;
+            }
+            
+            feedback.style.display = 'block';
+        }
+        
+        // Calculadora de tributos
+        function calcularTributo() {
+            const tributo = document.getElementById('tributo').value;
+            const valorBase = parseFloat(document.getElementById('valor-base').value);
+            let resultado = '';
+            
+            if (isNaN(valorBase)) {
+                alert('Por favor, insira um valor válido');
+                return;
+            }
+            
+            switch(tributo) {
+                case 'icms':
+                    const icms = valorBase * 0.18; // usando alíquota máxima
+                    resultado = `ICMS a pagar: R$ ${icms.toFixed(2)} (18% sobre R$ ${valorBase.toFixed(2)})`;
+                    break;
+                case 'ipi':
+                    const ipi = valorBase * 0.10; // usando alíquota média
+                    resultado = `IPI a pagar: R$ ${ipi.toFixed(2)} (10% sobre R$ ${valorBase.toFixed(2)})`;
+                    break;
+                case 'irpj':
+                    const irpjBase = valorBase * 0.15;
+                    const adicional = valorBase > 20000 ? (valorBase - 20000) * 0.10 : 0;
+                    const irpjTotal = irpjBase + adicional;
+                    resultado = `IRPJ a pagar: R$ ${irpjTotal.toFixed(2)} (15% = R$ ${irpjBase.toFixed(2)} + Adicional 10% = R$ ${adicional.toFixed(2)})`;
+                    break;
+                case 'iss':
+                    const iss = valorBase * 0.05; // usando alíquota máxima
+                    resultado = `ISS a pagar: R$ ${iss.toFixed(2)} (5% sobre R$ ${valorBase.toFixed(2)})`;
+                    break;
+            }
+            
+            const resultadoElement = document.getElementById('resultado-tributo');
+            resultadoElement.innerHTML = resultado;
+            resultadoElement.style.display = 'block';
+        }
+        
+        // Recomendação de regime tributário
+        function recomendarRegime() {
+            const faturamentoAnual = parseFloat(document.getElementById('faturamento-anual').value);
+            const atividade = document.getElementById('atividade').value;
+            let recomendacao = '';
+            
+            if (isNaN(faturamentoAnual)) {
+                alert('Por favor, insira um valor válido para o faturamento');
+                return;
+            }
+            
+            if (faturamentoAnual <= 5200000) {
+                recomendacao = `Recomendação: <strong>Simples Nacional</strong> (faturamento dentro do limite de R$ 4,8 milhões)`;
+            } else if (faturamentoAnual <= 85000000) {
+                recomendacao = `Recomendação: <strong>Lucro Presumido</strong> (faturamento entre R$ 4,8 milhões e R$ 85 milhões)`;
+            } else {
+                recomendacao = `Recomendação: <strong>Lucro Real</strong> (faturamento acima de R$ 85 milhões - obrigatório)`;
+            }
+            
+            const resultadoElement = document.getElementById('resultado-regime');
+            resultadoElement.innerHTML = recomendacao;
+            resultadoElement.style.display = 'block';
+        }
+        
+        // Botão voltar ao topo
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>
